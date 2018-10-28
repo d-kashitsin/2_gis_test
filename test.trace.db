@@ -1,0 +1,12 @@
+2018-10-28 22:46:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ROOMS" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 1 [42102-197]
+2018-10-28 22:47:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ROOMS" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 1 [42102-197]
+2018-10-28 22:48:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ROOMS" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 1 [42102-197]
+2018-10-28 22:48:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ROOMS" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 2 [42102-197]

@@ -1,0 +1,2204 @@
+2018-10-23 19:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+INSERT INTO USERS(First_Name,email) VALUES ('John','john@gmail.com') [42102-197]
+2018-10-23 21:10:22 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" already exists; SQL statement:
+CREATE TABLE USERS (cinema_id identity PRIMARY KEY, cinema_name varchar(255) NOT NULL, cinema_adress varchar(255) NOT NULL) [42101-197]
+2018-10-23 21:37:28 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Cinema.addCinema(Cinema.java:15)
+	at rest.Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-23 21:38:09 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Cinema.addCinema(Cinema.java:15)
+	at rest.Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-23 21:41:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTOcinema(BATCHNAME) VALUES ([*]'Синемапарк на маркса,пл.К.Маркса 3,3)"; SQL statement:
+INSERT INTOcinema(BATCHNAME) VALUES ('Синемапарк на маркса,пл.К.Маркса 3,3) [42000-197]
+2018-10-23 21:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO cinema(cinema_name,cinema_adress) VALUES ([*]'Синемапарк на маркса,пл.К.Маркса 3)"; SQL statement:
+INSERT INTO cinema(cinema_name,cinema_adress) VALUES ('Синемапарк на маркса,пл.К.Маркса 3) [42000-197]
+2018-10-23 21:45:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "1" for parameter "columnIndex" [90008-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:240)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3191)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:328)
+	at rest.model.Cinema.addCinema(Cinema.java:31)
+	at rest.Main.main(Main.java:11)
+2018-10-23 21:50:05 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Cinema.addCinema(Cinema.java:15)
+	at rest.Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-23 21:51:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "cinema_id" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:346)
+	at rest.model.Cinema.addCinema(Cinema.java:31)
+	at rest.Main.main(Main.java:11)
+2018-10-23 21:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CINEMA(CINEMA_NAME,CINEMA_ADRESS) VALUES ('Синемапарк на маркса','пл.К.Маркса 3') RETURNING[*] CINEMA_ID "; SQL statement:
+INSERT INTO cinema(cinema_name,cinema_adress) VALUES ('Синемапарк на маркса','пл.К.Маркса 3') RETURNING cinema_id [42000-197]
+2018-10-23 21:54:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CINEMA(CINEMA_NAME,CINEMA_ADRESS) VALUES ('Синемапарк на маркса','пл.К.Маркса 3') RETURNING[*] ID "; SQL statement:
+INSERT INTO cinema(cinema_name,cinema_adress) VALUES ('Синемапарк на маркса','пл.К.Маркса 3') RETURNING id [42000-197]
+2018-10-23 22:35:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "First_Name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3148)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at rest.model.Cinema.printCinema(Cinema.java:66)
+	at rest.Main.main(Main.java:13)
+2018-10-23 22:36:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "CINEMAWHERE" not found; SQL statement:
+DELETE FROM cinemaWHERE cinema_id=2 [42102-197]
+2018-10-23 22:45:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE CINEMA SET CINEMA_NAME=СИНЕМАПАРК НА[*] КАЛИНИНА, CINEMA_ADRESS=КРАСНЫЙ ПРОСПЕКТ, 101 WHERE CINEMA_ID=18 "; SQL statement:
+UPDATE cinema SET cinema_name=Синемапарк на калинина, cinema_adress=Красный проспект, 101 WHERE cinema_id=18 [42000-197]
+2018-10-24 10:29:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ROOMS PLACES_COUNT[*] PLACES_AMOUNT "; ожидалось "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"
+Syntax error in SQL statement "ALTER TABLE ROOMS PLACES_COUNT[*] PLACES_AMOUNT "; expected "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"; SQL statement:
+ALTER TABLE rooms places_count places_amount [42001-197]
+2018-10-24 10:29:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: 
+Unknown data type: ; SQL statement:
+ALTER TABLE rooms CHANGE places_count places_amount [50004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4400)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4215)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:6116)
+	at org.h2.command.Parser.parseAlter(Parser.java:5373)
+	at org.h2.command.Parser.parsePrepared(Parser.java:362)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 10:30:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "places_count" не найден
+Column "places_count" not found; SQL statement:
+ALTER TABLE rooms CHANGE "places_count" "places_amount" [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.columnIfTableExists(Parser.java:6283)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:6112)
+	at org.h2.command.Parser.parseAlter(Parser.java:5373)
+	at org.h2.command.Parser.parsePrepared(Parser.java:362)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 10:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: 
+Unknown data type: ; SQL statement:
+ALTER TABLE rooms CHANGE PLACES_COUNT  "places_amount" [50004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4400)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4215)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:6116)
+	at org.h2.command.Parser.parseAlter(Parser.java:5373)
+	at org.h2.command.Parser.parsePrepared(Parser.java:362)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 10:30:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: 
+Unknown data type: ; SQL statement:
+ALTER TABLE rooms CHANGE PLACES_COUNT PLACES_AMOUNT [50004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4400)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4215)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:6116)
+	at org.h2.command.Parser.parseAlter(Parser.java:5373)
+	at org.h2.command.Parser.parsePrepared(Parser.java:362)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 10:30:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: 
+Unknown data type: ; SQL statement:
+ALTER TABLE rooms CHANGE "PLACES_COUNT" "PLACES_AMOUNT" [50004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4400)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4215)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:6116)
+	at org.h2.command.Parser.parseAlter(Parser.java:5373)
+	at org.h2.command.Parser.parsePrepared(Parser.java:362)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 11:41:39 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.TableEditor.printTable(TableEditor.java:55)
+	at rest.model.Cinema.printCinema(Cinema.java:57)
+	at rest.Main.main(Main.java:19)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 21 more
+2018-10-24 11:43:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ошибка преобразования данных при конвертации "Синемапарк на маркса"
+Data conversion error converting "Синемапарк на маркса" [22018-197]
+2018-10-24 11:44:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ошибка преобразования данных при конвертации "Синемапарк на маркса"
+Data conversion error converting "Синемапарк на маркса" [22018-197]
+2018-10-24 11:57:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Объект уже закрыт
+The object is already closed [90007-197]
+2018-10-24 12:15:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "PLACES_COUNT" не найден
+Column "PLACES_COUNT" not found; SQL statement:
+INSERT INTO rooms(cinema_id,room_name,places_count) VALUES(18,'IMAX',600) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 17:53:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "USERID" не найден
+Column "USERID" not found; SQL statement:
+CREATE TABLE reserv (r_id identity PRIMARY KEY, reserv_id INT, ROOM_ID INT, USERID INT, FOREIGN KEY (USERID ) REFERENCES cinema(USERID )) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:74)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:227)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:88)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:122)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 17:54:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "USERID" не найден
+Column "USERID" not found; SQL statement:
+CREATE TABLE reserv (r_id identity PRIMARY KEY, reserv_id INT, room_id INT, userid INT, FOREIGN KEY (userid,room_id ) REFERENCES cinema(userid,room_id)) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:74)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:227)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:88)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:122)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-24 17:55:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE reserv (r_id identity PRIMARY KEY, reserv_id INT, room_id INT, userid INT, FOREIGN KEY (userid,room_id ) REFERENCES users(userid),rooms(room_id)) [50004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4400)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4215)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:6662)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:6570)
+	at org.h2.command.Parser.parseCreate(Parser.java:4615)
+	at org.h2.command.Parser.parsePrepared(Parser.java:380)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-25 10:48:02 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Cinema.printCinema(Cinema.java:60)
+	at rest.Main.main(Main.java:19)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 11:47:31 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Cinema.printCinema(Cinema.java:60)
+	at rest.Main.main(Main.java:21)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 11:47:31 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Room.printRoom(Room.java:75)
+	at rest.Main.main(Main.java:22)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 11:47:31 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Room.getPlacesAmount(Room.java:97)
+	at rest.Main.main(Main.java:23)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 11:47:31 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Reserv.printReserv(Reserv.java:66)
+	at rest.Main.main(Main.java:25)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 14:44:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "SELEST[*] * FROM RESERV "; ожидалось "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"
+Syntax error in SQL statement "SELEST[*] * FROM RESERV "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+selest * from reserv [42001-197]
+2018-10-25 14:46:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "USER" не найдена
+Table "USER" not found; SQL statement:
+select * from user [42102-197]
+2018-10-25 14:46:28 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Cinema.printCinema(Cinema.java:60)
+	at rest.Main.main(Main.java:21)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 14:46:28 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Room.printRoom(Room.java:75)
+	at rest.Main.main(Main.java:22)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 14:46:28 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Room.getPlacesAmount(Room.java:97)
+	at rest.Main.main(Main.java:23)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 14:46:28 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Reserv.reservPlace(Reserv.java:24)
+	at rest.Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 14:46:28 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Reserv.printReserv(Reserv.java:69)
+	at rest.Main.main(Main.java:26)
+Caused by: org.h2.jdbc.JdbcSQLException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/kashitsin.dmitriy/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 20 more
+2018-10-25 14:46:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ISERID" не найден
+Column "ISERID" not found; SQL statement:
+INSERT INTO reserv(room_id,iserid,place_number) VALUES ('2','1','15') [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:925)
+	at rest.model.Reserv.reservPlace(Reserv.java:27)
+	at rest.Main.main(Main.java:24)
+2018-10-25 14:47:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "rID" не найден
+Column "rID" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:346)
+	at rest.model.Reserv.reservPlace(Reserv.java:31)
+	at rest.Main.main(Main.java:24)
+2018-10-25 14:58:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Недопустимое значение "5" для параметра "columnIndex"
+Invalid value "5" for parameter "columnIndex" [90008-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:240)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3191)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3230)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:328)
+	at rest.model.Reserv.isAvailable(Reserv.java:67)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =0 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =1 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =2 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =3 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =4 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =5 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =6 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =7 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =8 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =9 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =10 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[17]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =11 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =12 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[19]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =13 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[20]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =14 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[21]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =15 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[22]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =16 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =17 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =18 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =19 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[26]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =20 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[27]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =21 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[28]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =22 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[29]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =23 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[30]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =24 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[31]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =25 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =26 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =27 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =28 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-25 16:35:57 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "ROOM_NAME" не найден
+Column "ROOM_NAME" not found; SQL statement:
+DELETE FROM reserv WHERE room_name =29 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at deleteReserv(Reserv.java:108)
+	at rest.Main.main(Main.java:25)
+2018-10-26 09:42:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "SELECT R.RESERV_ID R.[*]PLACE_NUMBER RO.ROOM_NAME FROM  RESERV R 
+LEFT JOIN ROOMS RO ON R.ROOM_ID = RO.ROOM_ID "
+Syntax error in SQL statement "SELECT R.RESERV_ID R.[*]PLACE_NUMBER RO.ROOM_NAME FROM  RESERV R 
+LEFT JOIN ROOMS RO ON R.ROOM_ID = RO.ROOM_ID "; SQL statement:
+SELECT r.reserv_id r.place_number ro.room_name FROM  reserv r 
+LEFT JOIN rooms ro ON r.room_id = ro.room_id [42000-197]
+2018-10-26 09:44:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "SELECT RESERV.RESERV_ID RESERV.[*]PLACE_NUMBER ROOMS.ROOM_NAME FROM  RESERV R 
+LEFT JOIN ROOMS RO ON R.ROOM_ID = RO.ROOM_ID "
+Syntax error in SQL statement "SELECT RESERV.RESERV_ID RESERV.[*]PLACE_NUMBER ROOMS.ROOM_NAME FROM  RESERV R 
+LEFT JOIN ROOMS RO ON R.ROOM_ID = RO.ROOM_ID "; SQL statement:
+SELECT reserv.reserv_id reserv.place_number rooms.room_name FROM  reserv r 
+LEFT JOIN rooms ro ON r.room_id = ro.room_id [42000-197]
+2018-10-26 09:45:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "SELECT RESERV.RESERV_ID  ROOMS.[*]ROOM_NAME FROM  RESERV 
+LEFT JOIN ROOMS ON RESERV.ROOM_ID = ROOMS.ROOM_ID "
+Syntax error in SQL statement "SELECT RESERV.RESERV_ID  ROOMS.[*]ROOM_NAME FROM  RESERV 
+LEFT JOIN ROOMS ON RESERV.ROOM_ID = ROOMS.ROOM_ID "; SQL statement:
+SELECT reserv.reserv_id  rooms.room_name FROM  reserv 
+LEFT JOIN rooms ON reserv.room_id = rooms.room_id [42000-197]
+2018-10-26 09:52:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "CINEMA.NAME" не найден
+Column "CINEMA.NAME" not found; SQL statement:
+SELECT reserv.reserv_id,  rooms.room_name, cinema.name FROM  reserv 
+LEFT JOIN rooms ON reserv.room_id = rooms.room_id
+LEFT JOIN cinema ON rooms.cinema_id = cinema.cinema_id [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-10-26 10:42:56 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "RESERVLEFT" не найдена
+Table "RESERVLEFT" not found; SQL statement:
+SELECT reserv.reserv_id, reserv.place_number, rooms.room_name, cinema.cinema_name FROM  reservLEFT JOIN rooms ON reserv.room_id = rooms.room_idLEFT JOIN cinema ON rooms.cinema_id = cinema.cinema_idWHERE reserv.reserv_id = 32 [42102-197]
+2018-10-26 21:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-26 21:08:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-10-27 10:37:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 10:58:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:00:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:00:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:01:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:01:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:04:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:04:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:04:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:04:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:05:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:05:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:05:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:06:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 11:06:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 15:26:22 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Model.<init>(Model.java:16)
+	at rest.controller.Controller.<init>(Controller.java:22)
+	at rest.Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 21 more
+2018-10-27 16:45:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 16:45:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 20:00:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-27 20:36:58 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Model.<init>(Model.java:16)
+	at rest.controller.Controller.<init>(Controller.java:27)
+	at rest.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 21 more
+2018-10-27 20:56:03 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Model.<init>(Model.java:16)
+	at rest.controller.Controller.<init>(Controller.java:31)
+	at rest.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 21 more
+2018-10-27 21:50:10 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:733)
+	at org.h2.server.web.WebApp.login(WebApp.java:954)
+	at org.h2.server.web.WebApp.process(WebApp.java:211)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebThread.process(WebThread.java:134)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 29 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 23 more
+2018-10-27 21:59:39 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Model.<init>(Model.java:16)
+	at rest.controller.Controller.<init>(Controller.java:30)
+	at rest.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/test.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 21 more
+2018-10-28 10:57:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 10:58:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 10:59:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 11:05:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 11:06:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 11:06:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 11:08:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 11:08:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 11:09:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 11:14:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2018-10-28 21:41:50 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Model.<init>(Model.java:16)
+	at rest.controller.Controller.<init>(Controller.java:30)
+	at ApiWebTest.before(ApiWebTest.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 49 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 43 more
+2018-10-28 21:41:50 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Model.<init>(Model.java:16)
+	at rest.controller.Controller.<init>(Controller.java:30)
+	at ApiWebTest.before(ApiWebTest.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 49 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 43 more
+2018-10-28 21:41:50 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at rest.model.Model.<init>(Model.java:16)
+	at rest.controller.Controller.<init>(Controller.java:30)
+	at ApiWebTest.before(ApiWebTest.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 49 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/DK/IdeaProjects/test_task/cinema_orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 43 more
+2018-10-28 21:48:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACES_AMOUNT" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 1 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Room.getPlacesAmount(Room.java:82)
+	at rest.model.Seats.getAvailable(Seats.java:32)
+	at rest.model.Seats.getAvailable(Seats.java:48)
+	at rest.controller.Controller.getRoomSeats(Controller.java:168)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 21:48:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACES_AMOUNT" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 2 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Room.getPlacesAmount(Room.java:82)
+	at rest.model.Seats.getAvailable(Seats.java:32)
+	at rest.model.Seats.getAvailable(Seats.java:48)
+	at rest.controller.Controller.getRoomSeats(Controller.java:168)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:132)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 21:48:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACES_AMOUNT" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 1 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Room.getPlacesAmount(Room.java:82)
+	at rest.model.Seats.getAvailable(Seats.java:32)
+	at rest.model.Seats.getAvailable(Seats.java:48)
+	at rest.controller.Controller.getRoomSeats(Controller.java:168)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 21:49:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACES_AMOUNT" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 0 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Room.getPlacesAmount(Room.java:82)
+	at rest.model.Seats.getAvailable(Seats.java:32)
+	at rest.model.Seats.getAvailable(Seats.java:48)
+	at rest.controller.Controller.getRoomSeats(Controller.java:168)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 21:52:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACES_AMOUNT" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 0 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Room.getPlacesAmount(Room.java:82)
+	at rest.model.Seats.getAvailable(Seats.java:32)
+	at rest.controller.Controller.getRoomSeats(Controller.java:168)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 21:52:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACES_AMOUNT" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 1 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Room.getPlacesAmount(Room.java:82)
+	at rest.model.Seats.getAvailable(Seats.java:32)
+	at rest.controller.Controller.getRoomSeats(Controller.java:168)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:132)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 21:52:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACES_AMOUNT" not found; SQL statement:
+SELECT places_amount FROM rooms WHERE room_id = 2 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Room.getPlacesAmount(Room.java:82)
+	at rest.model.Seats.getAvailable(Seats.java:32)
+	at rest.controller.Controller.getRoomSeats(Controller.java:168)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 21:54:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "PLACE_NUMBER" not found; SQL statement:
+SELECT place_number FROM reserv WHERE place_number =22 AND room_id =2 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at rest.model.Reserv.isAvailable(Reserv.java:83)
+	at rest.model.Reserv.massReserving(Reserv.java:24)
+	at rest.controller.Controller.createReserv(Controller.java:129)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+2018-10-28 22:34:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
