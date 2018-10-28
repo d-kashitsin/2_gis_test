@@ -9,3 +9,5 @@ out
 gen
 /.idea/
 /test_task.iml
+/target/
+!/target/2Gis_test.jar
